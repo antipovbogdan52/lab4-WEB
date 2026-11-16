@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфоліо Богдана Антіпова</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site">
+    <header class="header">
+      <h1 class="logo">Портфоліо Богдана Антіпова</h1>
+
+      <nav class="menu">
+        <a href="#about">Про автора</a>
+        <a href="#projects">Основні роботи</a>
+        <a href="#contacts">Контакти</a>
+        <a href="#links">Корисні посилання</a>
+      </nav>
+
+      <details class="mobile-menu">
+        <summary>☰ Меню</summary>
+        <nav>
+          <a href="#about">Про автора</a>
+          <a href="#projects">Основні роботи</a>
+          <a href="#contacts">Контакти</a>
+          <a href="#links">Корисні посилання</a>
+        </nav>
+      </details>
+    </header>
+
+    <main class="main-content">
+      <section id="about" class="section">
+        <h2>Про автора</h2>
+        <p>Мене звати Богдан Антіпов. Я студент факультету інформаційних технологій Київського національного університету імені Тараса Шевченка. Навчаюся за напрямом «Аналітика даних». Цікавлюся програмуванням, веброзробкою та сучасними інформаційними технологіями.</p>
+      </section>
+
+      <section id="projects" class="section row-section">
+        <div class="left-block">
+          <h2>Основні роботи</h2>
+          <p>Мої навчальні проєкти:</p>
+          <ol>
+            <li>Вебсайт про гриби — багатосторінковий сайт з HTML та CSS.</li>
+            <li>Аналіз даних — робота з Python та бібліотеками.</li>
+            <li>Бази даних — створення таблиць і SQL-запитів.</li>
+            <li>Портфоліо автора — розробка односторінкового сайту.</li>
+          </ol>
+        </div>
+        <aside class="project-card">
+          <h3>Мої проєкти</h3>
+          <p class="project-number-row">
+            <strong class="project-number">04</strong> навчальні проєкти
+          </p>
+          <p>HTML, CSS, Python, SQL</p>
+        </aside>
+      </section>
+
+      <!-- 1. Галерея проєктів -->
+      <section id="gallery" class="section">
+        <h2>Галерея проєктів</h2>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="images/web.svg" alt="Сайт про гриби">
+            <div class="card-content">
+              <h3>Сайт про гриби</h3>
+              <p>Навчальний сайт на HTML і CSS.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/data.svg" alt="Аналіз даних">
+            <div class="card-content">
+              <h3>Аналіз даних</h3>
+              <p>Робота з наборами даних у Python.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/database.svg" alt="Бази даних">
+            <div class="card-content">
+              <h3>Бази даних</h3>
+              <p>Таблиці, зв'язки та SQL-запити.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/portfolio.svg" alt="Портфоліо">
+            <div class="card-content">
+              <h3>Портфоліо</h3>
+              <p>Верстка і адаптація власного сайту.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2. Статистика -->
+      <section id="stats" class="section">
+        <h2>Статистика та навички</h2>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <strong>4</strong><span>навчальні проєкти</span>
+          </article>
+          <article class="stat-card">
+            <strong>4</strong><span>технології: HTML, CSS, Python, SQL</span>
+          </article>
+          <article class="stat-card">
+            <strong>3</strong><span>напрями: веб, аналітика, бази даних</span>
+          </article>
+        </div>
+        <label class="progress-label" for="projects-progress">
+          Проєкти, представлені в портфоліо: 4 із 4
+        </label>
+        <progress id="projects-progress" value="4" max="4">4 із 4</progress>
+      </section>
+
+      <!-- 3. Історія розвитку -->
+      <section id="timeline" class="section">
+        <h2>Історія розвитку</h2>
+        <ol class="timeline">
+          <li><strong>Етап 1. HTML</strong><p>Створення структури перших вебсторінок.</p></li>
+          <li><strong>Етап 2. CSS</strong><p>Оформлення сторінок, робота з макетами.</p></li>
+          <li><strong>Етап 3. Python і SQL</strong><p>Завдання з аналізу даних і баз даних.</p></li>
+          <li><strong>Етап 4. Портфоліо</strong><p>Об'єднання робіт на адаптивному сайті.</p></li>
+        </ol>
+      </section>
+
+      <!-- 4. Останні публікації -->
+      <section id="news" class="section">
+        <h2>Останні публікації</h2>
+        <div class="news-grid">
+          <article class="news-card">
+            <p class="news-meta"><time datetime="2026">2026</time> · Веброзробка · #HTML</p>
+            <h3>Мій перший багатосторінковий сайт</h3>
+            <p>У проєкті про гриби відпрацював роботу з HTML-сторінками та CSS.</p>
+            <details class="news-more">
+              <summary>Читати далі</summary>
+              <p>У роботі використовував окремі HTML-сторінки, навігацію та CSS-стилі.</p>
+            </details>
+          </article>
+          <article class="news-card">
+            <p class="news-meta"><time datetime="2026">2026</time> · Аналітика · #Python</p>
+            <h3>Знайомство з аналізом даних</h3>
+            <p>Навчився обробляти дані та показувати результати роботи.</p>
+            <details class="news-more">
+              <summary>Читати далі</summary>
+              <p>Працював з даними, обчисленнями та візуалізацією результатів у Python.</p>
+            </details>
+          </article>
+          <article class="news-card">
+            <p class="news-meta"><time datetime="2026">2026</time> · Портфоліо · #CSS</p>
+            <h3>Адаптивний дизайн портфоліо</h3>
+            <p>Переробив макет для телефонів, планшетів і комп'ютерів.</p>
+            <details class="news-more">
+              <summary>Читати далі</summary>
+              <p>Перевів блоки на CSS Grid і Flexbox та додав правила для трьох типів екранів.</p>
+            </details>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacts" class="section row-section">
+        <div class="left-block">
+          <h2>Контакти</h2>
+          <p>Зв'язатися зі мною можна через:</p>
+          <p>
+            Електронна пошта:
+            <a href="mailto:antipovbogdan2006@mail.com">antipovbogdan2006@mail.com</a><br>
+            GitHub: <a href="https://github.com/antipovbogdan52">github.com/antipovbogdan52</a><br>
+            Навчальний заклад: КНУ імені Тараса Шевченка
+          </p>
+        </div>
+        <aside class="skills-card">
+          <h3>Мої навички</h3>
+          <p>HTML — створення вебсторінок<br>
+          CSS — оформлення сайтів<br>
+          Python — аналіз даних<br>
+          SQL — робота з базами даних</p>
+        </aside>
+      </section>
+
+      <!-- 5. Форма зворотного зв'язку -->
+      <section id="feedback" class="section">
+        <h2>Форма зворотного зв'язку</h2>
+        <p>Маєте запитання? Напишіть повідомлення.</p>
+
+        <form class="contact-form" action="mailto:antipovbogdan2006@mail.com" method="post" enctype="text/plain">
+          <div class="form-grid">
+            <label>Ваше ім'я
+              <input type="text" name="Ім'я" placeholder="Введіть ім'я" required pattern=".{2,50}" title="Від 2 до 50 символів">
+            </label>
+            <label>Електронна пошта
+              <input type="email" name="Email" placeholder="name@example.com" required>
+            </label>
+          </div>
+
+          <label>Тема звернення
+            <select name="Тема" required>
+              <option value="" disabled selected>Оберіть тему</option>
+              <option value="Питання про проєкт">Питання про проєкт</option>
+              <option value="Співпраця">Співпраця</option>
+              <option value="Інше">Інше</option>
+            </select>
+          </label>
+
+          <label>Ваше повідомлення
+            <textarea name="Повідомлення" rows="4" placeholder="Напишіть повідомлення" required minlength="10"></textarea>
+          </label>
+
+          <label class="checkbox-line">
+            <input type="checkbox" required>
+            Погоджуюся на відкриття поштового застосунку
+          </label>
+
+          <button type="submit">Написати на пошту</button>
+          <p class="form-note">Після натискання відкриється поштовий застосунок. Сайт не зберігає введені дані.</p>
+        </form>
+      </section>
+    </main>
+
+    <aside id="links" class="resources">
+      <h2>Корисні посилання</h2>
+      <h3>Рекомендовані ресурси для вивчення веброзробки</h3>
+      <p>
+        <a href="https://github.com">GitHub</a> ·
+        <a href="https://www.w3schools.com">W3Schools</a> ·
+        <a href="https://developer.mozilla.org">MDN Web Docs</a> ·
+        <a href="https://www.figma.com">Figma</a>
+      </p>
+    </aside>
+
+    <footer class="footer">
+      <p>© 2026 Богдан Антіпов. Усі права захищено.</p>
+    </footer>
+  </div>
+</body>
+</html>
