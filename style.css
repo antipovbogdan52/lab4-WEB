@@ -1,0 +1,336 @@
+
+/* Загальні стилі */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #35455e;
+  background: #eeeeee;
+  line-height: 1.5;
+}
+
+a { color: #294773; overflow-wrap: anywhere; }
+a:hover { color: #3974c3; }
+img { max-width: 100%; height: auto; display: block; }
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 3px solid #3974c3;
+  outline-offset: 3px;
+}
+
+.site {
+  width: min(100%, 90rem);
+  margin: auto;
+  background: #f3f6fb;
+}
+
+/* Шапка і меню */
+.header { display: flex; color: white; }
+
+.logo {
+  flex: 1 1 35%;
+  margin: 0;
+  padding: 1.2rem 1.5rem;
+  background: #22385f;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 400;
+}
+
+.menu {
+  flex: 1 1 65%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #294773;
+}
+
+.menu a, .mobile-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover, .mobile-menu a:hover {
+  text-decoration: underline;
+  color: #dce8f7;
+}
+
+.mobile-menu { display: none; }
+
+/* Основний вміст */
+.main-content { padding: 2rem clamp(1rem, 3vw, 2rem); }
+.section { margin-bottom: 3rem; scroll-margin-top: 1rem; }
+
+h2 {
+  color: #22385f;
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+}
+
+h3 { margin: 0 0 .6rem; font-size: 1.1rem; }
+p { margin: .5rem 0 1rem; }
+
+.row-section {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(15rem, 1fr);
+  align-items: start;
+  gap: 2rem;
+}
+
+.left-block { min-width: 0; }
+.left-block ol { padding-left: 1.4rem; }
+.left-block li { margin-bottom: .35rem; }
+
+.project-card, .skills-card {
+  padding: 1.2rem 1.4rem;
+  border-radius: .8rem;
+}
+
+.project-card { background: #dce8f7; }
+.skills-card { background: #2f4f83; color: white; }
+.project-card h3, .project-number { color: #22385f; }
+
+.project-number-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-number { font-size: 3.5rem; line-height: 1; }
+
+/* Галерея */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem;
+}
+
+.gallery-card, .news-card, .stat-card {
+  background: white;
+  border: 1px solid #dce5f1;
+  border-radius: .8rem;
+  overflow: hidden;
+}
+
+.gallery-card { transition: transform .2s, box-shadow .2s; }
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px #22385f20;
+}
+
+.gallery-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.card-content { padding: 1rem; }
+.card-content p { margin: 0; }
+
+/* Статистика */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.stat-card strong {
+  font-size: 2.5rem;
+  color: #22385f;
+  line-height: 1;
+}
+
+.progress-label { display: block; margin: 1.1rem 0 .3rem; }
+progress { width: 100%; accent-color: #3974c3; }
+
+/* Історія розвитку */
+.timeline {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+}
+
+.timeline li {
+  padding: 1rem 1.2rem;
+  border-left: .3rem solid #3974c3;
+  background: #e6effa;
+  border-radius: .4rem;
+}
+
+.timeline li p { margin: .4rem 0 0; }
+
+/* Публікації */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.news-card {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card .news-meta {
+  color: #5d6d82;
+  font-size: .8rem;
+  margin: 0 0 .6rem;
+}
+
+.news-more { margin-top: auto; }
+
+.news-more summary {
+  display: list-item;
+  color: #294773;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.news-more summary:hover { color: #3974c3; }
+
+/* Форма */
+.contact-form {
+  max-width: 44rem;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #dce5f1;
+  border-radius: .8rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-form input:not([type="checkbox"]),
+.contact-form select,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: .35rem;
+  padding: .75rem;
+  border: 1px solid #9daec4;
+  border-radius: .4rem;
+  font: inherit;
+}
+
+.contact-form textarea { resize: vertical; }
+
+.contact-form .checkbox-line {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  font-weight: normal;
+}
+
+.checkbox-line input { margin-top: .35rem; }
+
+button {
+  background: #294773;
+  color: white;
+  border: 0;
+  border-radius: .4rem;
+  padding: .8rem 1.2rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover { background: #3974c3; }
+
+.form-note {
+  margin: .8rem 0 0;
+  color: #5d6d82;
+  font-size: .85rem;
+}
+
+/* Посилання і підвал */
+.resources {
+  padding: 1.5rem clamp(1rem, 3vw, 2rem);
+  background: #dce8f7;
+}
+
+.resources h3 { font-size: .95rem; }
+
+.footer {
+  background: #22385f;
+  color: white;
+  padding: 1.5rem clamp(1rem, 3vw, 2rem);
+}
+
+.footer p { margin: 0; font-size: .85rem; }
+
+/* Планшет */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header { flex-wrap: wrap; }
+  .logo, .menu { flex-basis: 100%; }
+  .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Телефон */
+@media (max-width: 767px) {
+  .header { display: block; }
+  .logo { padding: 1rem; font-size: 1.3rem; }
+  .menu { display: none; }
+
+  .mobile-menu {
+    display: block;
+    background: #294773;
+    color: white;
+    padding: .65rem 1rem;
+  }
+
+  .mobile-menu summary {
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker { display: none; }
+
+  .mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: 1rem 0 .3rem;
+  }
+
+  .main-content { padding: 1.2rem 1rem; }
+  .section { margin-bottom: 2rem; }
+
+  .row-section, .stats-grid, .timeline,
+  .news-grid, .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form { padding: 1rem; }
+  .project-number { font-size: 3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .gallery-card { transition: none; }
+}
